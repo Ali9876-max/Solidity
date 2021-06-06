@@ -1,0 +1,18 @@
+//Follwing tasks are performed using this example
+//Functions
+//View functions
+//Pure functions
+
+pragma solidity ^0.7.6;
+contract fauscet4 {
+   constructor() public{
+   }
+   function getResult() public pure returns(int multiply,int add){
+      int x = 12; 
+      int y = 10;
+      int z=  50;
+      multiply = x * y * z;
+      add=x+y+z;
+      
+   }
+}

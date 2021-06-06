@@ -1,0 +1,20 @@
+
+//Follwing task is performed using this example
+ //Special Variable
+
+pragma solidity ^0.7.6;
+
+contract fauscet3 {
+   mapping(address => uint) public balances;
+
+   function updateBalance(uint newBalance) public {
+      balances[msg.sender] = newBalance;
+   }
+}
+contract Updater {
+   function updateBalance() public returns (uint) {
+      fauscet3 ledgerbalance = new fauscet3();
+      ledgerbalance.updateBalance(10);
+      return ledgerbalance.balances(address(this));
+   }
+}

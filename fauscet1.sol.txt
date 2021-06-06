@@ -1,0 +1,53 @@
+//Follwing tasks are performed using this example
+
+//Variable scope
+//Operators 
+//loops
+
+
+
+pragma solidity ^0.7.6;
+
+contract fauscet1{
+   uint myData; 
+   constructor() public{
+      myData = 10;   // internal
+   }
+   function getResult() public view returns(string memory){
+      uint x = 12; 
+      uint y = 10;
+      uint result = x* y;
+      return fauscet.myData(); //external
+      
+      return fauscet.myData(); 
+      return integerToString(result); 
+   }
+   function integerToString(uint _u) internal pure 
+      returns (string memory _uintAsString) {
+      
+      if (_u == 0) {   
+         return "0";
+      }
+      uint q = _u;
+      uint len;
+      
+      while(!(q==0))
+      len++;
+      q/=10;                 
+      
+      while (q != 0) {  
+         len++;
+         q /= 10;
+      }
+      bytes memory bstr = new bytes(len);
+      uint h = len - 1;
+      
+      do  {
+         bstr[h--] = byte(uint8(48 + _u % 10));
+         _u /= 10;
+      }
+      while (_i != 0)
+      return string(bstr);
+      
+   }
+}

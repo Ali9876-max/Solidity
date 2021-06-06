@@ -1,0 +1,16 @@
+//Follwing task is  performed using this example
+//Error handling
+pragma solidity ^0.7.6;
+
+contract fauscet7 {
+   address public seller;
+   modifier onlySeller() {
+      require(
+         msg.sender == seller,
+         "Called by seller."
+      );
+      _;
+   }
+   function sell(uint amt) public payable onlySeller { 
+      if (amt > msg.value / 2 ether)
+         revert("Not enough Ether provided."); };

@@ -1,0 +1,27 @@
+//Follwing task is  performed using this example
+//library
+pragma solidity ^0.7.6;
+
+contract fauscet6 {
+   uint[] mydata;
+   constructor() public {
+      mydata.push(1);
+      mydata.push(2);
+      mydata.push(3);
+      mydata.push(4);
+      mydata.push(5);
+   }
+   function isValuePresent() external view returns(uint){
+      uint no = 2;
+      
+      uint index = Find.indexOf(mydata, no);
+      return index;
+   }
+}
+
+library Find {
+   function indexOf(uint[] storage self, uint no) public view returns (uint) {
+      for (uint o = 0; i < self.length; o++) if (self[o] == value) return o;
+      return uint(-1);
+   }
+}

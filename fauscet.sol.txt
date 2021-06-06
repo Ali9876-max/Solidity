@@ -1,0 +1,24 @@
+//Follwing task are performed using this example
+//Basic Syntax
+// First Simple Smart Contract
+//Comments
+//Three or four types
+//Variable 
+pragma solidity ^0.7.6;
+contract fauscet {
+    int mydata;
+   constructor() public{
+       mydata=16;
+   }
+   function getResult() public view returns(int){
+      int x = 12;  // THIS IS COMMENT
+     
+                    
+      int y = 10; /* THIS IS COMMENT */
+      int z=  50;   
+      int result = x * y * z;
+      return result;
+      
+   }
+}
+

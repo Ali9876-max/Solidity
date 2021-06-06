@@ -1,0 +1,27 @@
+//Follwing tasks are performed using this example
+//  String and Arrays
+
+
+pragma solidity ^0.7.6;
+
+contract fauscet2 {
+   function myArray() public pure{
+      uint len = 10; 
+      
+      uint[] memory x = new uint[](6);
+      
+      bytes memory y = new bytes(len);
+      
+      assert(x.length == 7);
+      assert(y.length == len);
+      
+     
+      x[6] = 8;
+      
+     
+      assert(x[6] == 8);
+      
+      uint[3] memory z = [uint(1) , 2, 3];
+      assert(z.length == 3);
+   }
+}

@@ -1,0 +1,10 @@
+//Follwing task is  performed using this example
+//Crptographic function
+
+pragma solidity ^0.7.6;
+
+contract fauscet5 {   
+   function callKeccak256() public pure returns(bytes32 result){
+      return keccak256("DEF");
+   }  
+}
